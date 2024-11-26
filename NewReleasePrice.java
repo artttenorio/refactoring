@@ -1,11 +1,6 @@
 public class NewReleasePrice extends Price {
-    @Override
-    public int getPriceCode() {
-        return Movie.NEW_RELEASE;
+    public int getFrequentRenterPoints(int daysRented) {
+        return (daysRented > 1) ? 2: 1;
+    }
     }
 
-    @Override
-    public double getCharge(int daysRented){
-        return daysRented * 3;
-    }
-}
