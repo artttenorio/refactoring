@@ -1,26 +1,37 @@
 public class Movie {
+    public static final int CHILDRENS = 2;
+    public static final int REGULAR = 0;
+    public static final int NEW_RELEASE = 1;
 
-  public static final int  CHILDRENS = 2;
-  public static final int  REGULAR = 0;
-  public static final int  NEW_RELEASE = 1;
+    private String title;
+    private int priceCode;
 
-  private String _title;
-  private int _priceCode;
+    public Movie(String title, int priceCode) {
+        this.title = title;
+        this.priceCode = priceCode;
+    }
 
-  public Movie(String title, int priceCode) {
-      _title = title;
-      _priceCode = priceCode;
-  }
+    public int getPriceCode() {
+        return priceCode;
+    }
 
-  public int getPriceCode() {
-      return _priceCode;
-  }
+    public void setPriceCode(int priceCode) {
+        this.priceCode = priceCode;
+    }
 
-  public void setPriceCode(int arg) {
-      _priceCode = arg;
-  }
+    public String getTitle() {
+        return title;
+    }
 
-  public String getTitle (){
-      return _title;
-  }
-}
+    public double getCharge(int daysRented) {
+        double amount = 0;
+
+        switch (priceCode) {
+            case REGULAR:
+                amount += 2;
+                if (daysRented > 2) {
+                    amount += (daysRented - 2) * 1.5;
+                }
+                break;
+            case NEW_RELEASE:
+           
