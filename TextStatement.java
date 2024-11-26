@@ -1,8 +1,12 @@
 public class TextStatement extends Statement {
-    @Override
-    protected String headerString(Customer aCustomer) {
-        return "Rental Record for " + aCustomer.getName() + "\n";
+    public class TextStatement extends Statement {
+        @Override
+        protected String headerString(Customer aCustomer) {
+            return "Rental Record for " + aCustomer.getName() + "\n";
+        }
+        // outros métodos...
     }
+    
 
     @Override
     protected String rentalString(Rental aRental) {
