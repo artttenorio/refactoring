@@ -4,16 +4,15 @@ public class Movie {
     public static final int NEW_RELEASE = 1;
 
     private String _title;
-    private Price _price;  // Substitui o _priceCode
+    private Price _price;  
 
     public Movie(String title, int priceCode) {
         _title = title;
-        setPriceCode(priceCode);  // Atualizado para usar setPriceCode
+        setPriceCode(priceCode);  
     }
 
     public int getPriceCode() {
-        return _price.getPriceCode();  // Delegação para o método da classe Price
-    }
+        return _price.getPriceCode(); 
 
     public void setPriceCode(int priceCode) {
         switch (priceCode) {
@@ -31,5 +30,9 @@ public class Movie {
         }
     }
 
-    // Outros métodos e campos da classe...
+    public int getFrequentRenterPoints(int daysRented) {
+        return _price.getFrequentRenterPoints(daysRented);
+     }
+
+  
 }

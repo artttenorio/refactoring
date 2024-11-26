@@ -1,6 +1,5 @@
 public abstract class Price {
-    public abstract int getPriceCode();
-
-    // Método abstrato para ser implementado pelas subclasses
-    public abstract double getCharge(int daysRented);
+    public int getFrequentRenterPoints(int daysRented) {
+        //Adicionar o trecho de código extraído.
+     }
 }
